@@ -1,6 +1,6 @@
 # WeatherApp-v1 🌦️
 
-- ![Weather App Screenshot](screenshots/1.png)
+![Weather App Screenshot](screenshots/1.png)
 
 ✨ Author : Subha Goldar ✨
 
