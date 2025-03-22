@@ -23,12 +23,14 @@
       };
     </script>
   </head>
-  <body class="bg-black text-purple-200 font-sans">
+  <body
+    class="h-screen bg-gradient-to-b from-pink-950 to-violet-950 text-purple-200 font-sans"
+  >
     <!-- Sticky Header -->
     <header
-      class="bg-purple-700 sticky top-0 z-50 flex items-center p-4 shadow-md"
+      class="bg-purple-800 sticky top-0 z-40 flex items-center p-4 shadow-md"
     >
-      <img src="icons/logo.png" alt="Logo" class="h-10 w-50 mr-4" />
+      <img src="icons/logo.png" alt="Logo" class="h-8 w-45 mr-4" />
       <h1 class="text-right text-xl font-bold flex-grow text-white">
         Weather Forecast App
       </h1>
@@ -41,18 +43,20 @@
         <!-- Current Weather Card -->
         <div
           id="now-card"
-          class="bg-purple-900 rounded-lg shadow-lg p-4 flex-1 text-center"
+          class="bg-purple-950 rounded-lg shadow-lg p-4 flex-1 text-center"
         >
           <h2 class="text-lg font-bold">Now</h2>
           <p id="city-name" class="text-md font-semibold mt-2">City: --</p>
-          <p class="text-5xl" id="temperature">--°C</p>
+          <p class="text-6xl" id="temperature">--°C</p>
           <img
             id="weather-icon"
             src=""
             alt="Weather Icon"
-            class="h-30 w-30 mx-auto mt-2"
+            class="h-50 w-50 mx-auto mt-2"
           />
+
           <p id="weather-condition" class="text-gray-300 mt-2">Clear Sky</p>
+          <p id="date1" class="text-lg font-semibold mt-2">Date: --</p>
 
           <!-- Extra Details as Individual Cards with Icon Images -->
           <div class="grid grid-cols-2 gap-4 mt-4">
@@ -60,7 +64,7 @@
               class="bg-blue-700 text-white rounded-md p-3 shadow-md flex items-center"
             >
               <img
-                src="icons/humidity (1).png"
+                src="icons/humidity.png"
                 alt="Humidity Icon"
                 class="h-6 w-6 mr-3"
               />
@@ -114,30 +118,30 @@
         <!-- Location Card -->
         <div
           id="location-card"
-          class="bg-purple-900 rounded-lg shadow-lg p-4 flex-1"
+          class="bg-purple-950 rounded-lg shadow-lg p-4 flex-1"
         >
           <p class="text-md font-semibold">Enter a city name:</p>
           <input
             id="city-input"
             type="text"
             placeholder="Enter city"
-            class="border rounded-md p-2 w-full text-black mt-2"
+            class="border rounded-md p-2 w-full text-black mt-2 border-b-blue-100"
           />
           <button
             id="search-btn"
-            class="bg-purple-500 text-white rounded-md px-4 py-2 mt-2 w-full"
+            class="bg-purple-500 text-white hover:outline-2 hover:outline-offset-2 hover:outline-violet-500 active:bg-violet-700 rounded-md px-4 py-2 mt-2 w-full"
           >
             Search
           </button>
           <button
             id="current-location-btn"
-            class="bg-green-500 text-white rounded-md px-4 py-2 mt-2 w-full"
+            class="bg-green-500 text-white hover:outline-2 hover:outline-offset-2 hover:outline-violet-500 active:bg-violet-700 rounded-xl px-4 py-2 mt-2 w-full"
           >
             Use Current Location
           </button>
           <select
             id="recent-cities"
-            class="mt-2 border rounded-md p-2 w-full text-black"
+            class="bg-white divide-y divide-gray-100 rounded-lg shadow-sm dark:bg-gray-700 w-full mt-2 p-2"
           >
             <option value="">Recently Searched</option>
           </select>
@@ -159,14 +163,13 @@
         <p>&copy; 2025 Weather App. All rights reserved.</p>
         <p>
           <a
-            href="https://github.com/your-github-profile"
+            href="https://github.com/Subgold10/WeatherApp-v1.git"
             target="_blank"
-            class="underline"
+            class="underline hover:text-yellow-500"
             >GitHub</a
           >
-          | Created by Subha
+          | Created by : Subha Goldar
         </p>
-        <img src="icons/openweather.png" alt="Logo" class="h-5 w-30 mr-4" />
       </footer>
     </div>
 

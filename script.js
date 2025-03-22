@@ -9,6 +9,7 @@ const temperature = document.getElementById("temperature");
 const weatherIcon = document.getElementById("weather-icon");
 const weatherCondition = document.getElementById("weather-condition");
 const cityName = document.getElementById("city-name");
+const date1 = document.getElementById("date1");
 const humidity = document.getElementById("humidity");
 const pressure = document.getElementById("pressure");
 const visibility = document.getElementById("visibility");
@@ -31,7 +32,7 @@ const loadRecentCities = () => {
 const saveRecentCity = (city) => {
   let cities = JSON.parse(localStorage.getItem("recentCities")) || [];
   if (!cities.includes(city)) {
-    cities = [city, ...cities].slice(0, 5); // Keep only the latest 5 cities
+    cities = [city, ...cities].slice(0, 10); // Keep only the latest 5 cities
     localStorage.setItem("recentCities", JSON.stringify(cities));
   }
 };
@@ -60,7 +61,15 @@ const fetchForecast = async (city) => {
 
 // Update Current Weather Card
 const updateNowCard = (data) => {
+  const currentDate = new Date().toLocaleDateString(undefined, {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+
   cityName.textContent = `City: ${data.name}`;
+  date1.textContent = `Date: ${currentDate}`; // Dynamically setting the current date
   temperature.textContent = `${data.main.temp}°C`;
   weatherCondition.textContent = data.weather[0].description;
   weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
@@ -69,7 +78,6 @@ const updateNowCard = (data) => {
   visibility.textContent = `${(data.visibility / 1000).toFixed(1)} km`;
   feelsLike.textContent = `${data.main.feels_like}°C`;
 };
-
 // Update 5-Day Forecast
 const updateForecast = (data) => {
   forecast.innerHTML = "";
@@ -138,3 +146,4 @@ recentCities.addEventListener("change", (e) => {
 loadRecentCities();
 fetchWeather("Delhi");
 fetchForecast("Delhi");
+gi;
