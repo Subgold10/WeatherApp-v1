@@ -1,6 +1,6 @@
 # WeatherApp-v1 🌦️
 
-![Weather App Screenshot](screenshots/1.png)
+![Weather App Screenshot](screenshots/2.png)
 
 ✨ Author : Subha Goldar ✨
 
@@ -30,7 +30,7 @@
 
 ## SCREENSHOTS ✨
 
-![Weather App Screenshot](screenshots/2.png)
+![Weather App Screenshot](screenshots/1.png)
 
 ![Weather App Screenshot](screenshots/3.png)
 
