@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <!-- Import Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Import Font Nunito -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['"Nunito Sans"', "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="bg-black text-purple-200 font-sans">
+    <!-- Sticky Header -->
+    <header
+      class="bg-purple-700 sticky top-0 z-50 flex items-center p-4 shadow-md"
+    >
+      <img src="icons/logo.png" alt="Logo" class="h-10 w-50 mr-4" />
+      <h1 class="text-right text-xl font-bold flex-grow text-white">
+        Weather Forecast App
+      </h1>
+    </header>
+
+    <!-- Main Container -->
+    <div class="container mx-auto p-4">
+      <!-- Responsive Now and Location Section -->
+      <div class="flex flex-wrap lg:flex-nowrap gap-4">
+        <!-- Current Weather Card -->
+        <div
+          id="now-card"
+          class="bg-purple-900 rounded-lg shadow-lg p-4 flex-1 text-center"
+        >
+          <h2 class="text-lg font-bold">Now</h2>
+          <p id="city-name" class="text-md font-semibold mt-2">City: --</p>
+          <p class="text-5xl" id="temperature">--°C</p>
+          <img
+            id="weather-icon"
+            src=""
+            alt="Weather Icon"
+            class="h-30 w-30 mx-auto mt-2"
+          />
+          <p id="weather-condition" class="text-gray-300 mt-2">Clear Sky</p>
+
+          <!-- Extra Details as Individual Cards with Icon Images -->
+          <div class="grid grid-cols-2 gap-4 mt-4">
+            <div
+              class="bg-blue-700 text-white rounded-md p-3 shadow-md flex items-center"
+            >
+              <img
+                src="icons/humidity (1).png"
+                alt="Humidity Icon"
+                class="h-6 w-6 mr-3"
+              />
+              <div>
+                <p class="font-bold">Humidity</p>
+                <p id="humidity">--%</p>
+              </div>
+            </div>
+            <div
+              class="bg-green-700 text-white rounded-md p-3 shadow-md flex items-center"
+            >
+              <img
+                src="icons/wind.png"
+                alt="Pressure Icon"
+                class="h-6 w-6 mr-3"
+              />
+              <div>
+                <p class="font-bold">Pressure</p>
+                <p id="pressure">-- hPa</p>
+              </div>
+            </div>
+            <div
+              class="bg-orange-700 text-white rounded-md p-3 shadow-md flex items-center"
+            >
+              <img
+                src="icons/eye.png"
+                alt="Visibility Icon"
+                class="h-6 w-6 mr-3"
+              />
+              <div>
+                <p class="font-bold">Visibility</p>
+                <p id="visibility">-- km</p>
+              </div>
+            </div>
+            <div
+              class="bg-red-700 text-white rounded-md p-3 shadow-md flex items-center"
+            >
+              <img
+                src="icons/temprature.png"
+                alt="Feels Like Icon"
+                class="h-6 w-6 mr-3"
+              />
+              <div>
+                <p class="font-bold">Feels Like</p>
+                <p id="feels-like">--°C</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Location Card -->
+        <div
+          id="location-card"
+          class="bg-purple-900 rounded-lg shadow-lg p-4 flex-1"
+        >
+          <p class="text-md font-semibold">Enter a city name:</p>
+          <input
+            id="city-input"
+            type="text"
+            placeholder="Enter city"
+            class="border rounded-md p-2 w-full text-black mt-2"
+          />
+          <button
+            id="search-btn"
+            class="bg-purple-500 text-white rounded-md px-4 py-2 mt-2 w-full"
+          >
+            Search
+          </button>
+          <button
+            id="current-location-btn"
+            class="bg-green-500 text-white rounded-md px-4 py-2 mt-2 w-full"
+          >
+            Use Current Location
+          </button>
+          <select
+            id="recent-cities"
+            class="mt-2 border rounded-md p-2 w-full text-black"
+          >
+            <option value="">Recently Searched</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- 5-Day Forecast Section -->
+      <h2 class="text-lg font-bold mt-6">5-Day Forecast</h2>
+      <div
+        id="forecast"
+        class="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4"
+      >
+        <!-- Forecast Cards will dynamically render here -->
+      </div>
+      <!-- Footer -->
+      <footer
+        class="backdrop-filter backdrop-blur-sm bg-white/10 text-purple-200 text-xs p-2 mt-6 rounded-md shadow-md text-center"
+      >
+        <p>&copy; 2025 Weather App. All rights reserved.</p>
+        <p>
+          <a
+            href="https://github.com/your-github-profile"
+            target="_blank"
+            class="underline"
+            >GitHub</a
+          >
+          | Created by Subha
+        </p>
+        <img src="icons/openweather.png" alt="Logo" class="h-5 w-30 mr-4" />
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
