@@ -1,6 +1,6 @@
-const apiKey = "8a6c1a7f4d0d9bf301e865dd0a32adaa";
+const apiKey = "8a6c1a7f4d0d9bf301e865dd0a32adaa"; // Personal API key
 
-// DOM Elements
+// DOM Elements selecting
 const searchBtn = document.getElementById("search-btn");
 const currentLocationBtn = document.getElementById("current-location-btn");
 const cityInput = document.getElementById("city-input");
@@ -61,6 +61,7 @@ const fetchForecast = async (city) => {
 
 // Update Current Weather Card
 const updateNowCard = (data) => {
+  // getting date
   const currentDate = new Date().toLocaleDateString(undefined, {
     weekday: "long",
     year: "numeric",
@@ -97,7 +98,7 @@ const updateForecast = (data) => {
   }
 };
 
-// Current Location Weather
+// Current Location finder by coordinates
 const fetchWeatherByCoords = async (lat, lon) => {
   const res = await fetch(
     `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`
@@ -115,9 +116,9 @@ searchBtn.addEventListener("click", () => {
     return;
   }
 
-  // Centralized error handling for both API calls
-  Promise.all([fetchWeather(city), fetchForecast(city)]).catch(() =>
-    alert("Invalid location. Please enter a valid city name.")
+  //error handling for both API calls
+  Promise.all([fetchWeather(city), fetchForecast(city)]).catch(
+    () => alert("Invalid location. Please enter a valid city name.") // Invalid Location fetch - show alert
   );
 });
 
@@ -125,25 +126,24 @@ currentLocationBtn.addEventListener("click", () => {
   navigator.geolocation.getCurrentPosition(
     (position) => {
       const { latitude, longitude } = position.coords;
-      fetchWeatherByCoords(latitude, longitude).catch(() =>
-        alert("Unable to fetch weather for your current location.")
+      fetchWeatherByCoords(latitude, longitude).catch(
+        () => alert("Unable to fetch weather for your current location.") // Unable to fetch current location - show alert
       );
     },
-    () => alert("Unable to fetch location. Please enable location services.")
+    () => alert("Unable to fetch location. Please enable location services.") // Unable to fetch - show alert
   );
 });
 
 recentCities.addEventListener("change", (e) => {
   const city = e.target.value;
   if (city) {
-    Promise.all([fetchWeather(city), fetchForecast(city)]).catch(() =>
-      alert("Invalid location. Please enter a valid city name.")
+    Promise.all([fetchWeather(city), fetchForecast(city)]).catch(
+      () => alert("Invalid location. Please enter a valid city name.") // Invalid Location - show alert
     );
   }
 });
 
-// Initialize App
+// Initialize App and Add default location Delhi
 loadRecentCities();
 fetchWeather("Delhi");
 fetchForecast("Delhi");
-gi;
