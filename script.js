@@ -88,8 +88,8 @@ const updateForecast = (data) => {
         <p>${new Date(day.dt_txt).toLocaleDateString()}</p>
         <img src="http://openweathermap.org/img/wn/${
           day.weather[0].icon
-        }@2x.png" alt="Weather Icon" class="h-12 w-12 mx-auto">
-        <p>${day.main.temp}°C</p>
+        }@2x.png" alt="Weather Icon" class="h-15 w-15 mx-auto">
+        <p>Temp: ${day.main.temp}°C</p>
         <p>Wind: ${day.wind.speed} m/s</p>
         <p>Humidity: ${day.main.humidity}%</p>
       </div>
