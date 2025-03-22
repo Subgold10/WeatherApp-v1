@@ -30,7 +30,10 @@
 
 ## SCREENSHOTS ✨
 
-- ![Weather App Screenshot](screenshots/2.png)
-- ![Weather App Screenshot](screenshots/3.png)
-- ![Weather App Screenshot](screenshots/4.png)
-- ![Weather App Screenshot](screenshots/5.png)
+![Weather App Screenshot](screenshots/2.png)
+
+![Weather App Screenshot](screenshots/3.png)
+
+                            ![Weather App Screenshot](screenshots/4.png)
+
+                            ![Weather App Screenshot](screenshots/5.png)
