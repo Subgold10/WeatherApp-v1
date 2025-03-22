@@ -1,7 +1,8 @@
 # WeatherApp-v1 🌦️
 
-Author : Subha Goldar
-Email : Subgold10@gmail.com
+✨ Author : Subha Goldar ✨
+
+✨Email : Subgold10@gmail.com ✨
 
 ✨ A modern and responsive Weather Forecast App built with HTML, Tailwind CSS - CDN mode -, and JavaScript. ✨
 
@@ -22,4 +23,4 @@ Email : Subgold10@gmail.com
 
 ## Live Demo 🌦️
 
--
+- Link : https://subgold10.github.io/WeatherApp-v1/
