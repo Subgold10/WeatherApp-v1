@@ -1,5 +1,7 @@
 # WeatherApp-v1 🌦️
 
+- ![Weather App Screenshot](screenshots/1.png)
+
 ✨ Author : Subha Goldar ✨
 
 ✨Email : Subgold10@gmail.com ✨
@@ -28,4 +30,7 @@
 
 ## SCREENSHOTS ✨
 
-- ![Weather App Screenshot](screenshots/1.png)
+- ![Weather App Screenshot](screenshots/2.png)
+- ![Weather App Screenshot](screenshots/3.png)
+- ![Weather App Screenshot](screenshots/4.png)
+- ![Weather App Screenshot](screenshots/5.png)
