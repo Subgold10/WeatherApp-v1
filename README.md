@@ -25,3 +25,7 @@
 ## Live Demo 🌦️
 
 - Link : https://subgold10.github.io/WeatherApp-v1/
+
+## SCREENSHOTS ✨
+
+- ![Weather App Screenshot](screenshots/1.png)
