@@ -15,7 +15,7 @@
 - 5-Day Forecast: View an extended forecast for the next 5 days.
 - Responsive Design: Optimized for desktops, tablets, and smartphones.
 - Modern Design: Styled with **Tailwind CSS** and icon images.
-- CDN Link - Used **Tailwind CSS** CDN Link- https://cdn.tailwindcss.com , and so no external CSS file , or Tailwind config files are used.
+- CDN Link - Used **Tailwind CSS** CDN Link- https://cdn.tailwindcss.com , and so no external CSS file , or Tailwind config files are used in the project.
 
 ## Technologies Used 🛠️
 
